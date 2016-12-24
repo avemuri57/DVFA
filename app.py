@@ -4,11 +4,24 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return '<h1> Hello World: %s</h1>' % request.method
+	return 'Login Page'
 
-@app.route('/profile/<username>',methods=['GET'])
-def profile(username):
-	return render_template("profile.html", name=username)
+@app.route('/about')
+def about():
+	return 'About Page'
+
+@app.route('/register')
+def register():
+	return 'Registration Page'
+
+#Restricted Routes
+@app.route('/profile')
+def profile():
+	return 'Profile Based on Users Role'
+
+@app.route('/settings')
+def settings():
+	return 'profile Settings'
 
 
 

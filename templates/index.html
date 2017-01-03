@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>DVFA</title>
+  
+  <link rel="stylesheet" href="{{url_for('static',filename='login/css/reset-min.css')}}">
+  <link rel='stylesheet prefetch' href="{{url_for('static',filename='login/css/fonts.css')}}">
+<link rel='stylesheet prefetch' href="{{url_for('static',filename='login/css/font-awesome-min-4.3.0.css')}}">
+
+      <link rel="stylesheet" href="{{url_for('static',filename='login/css/style.css')}}">
+
+  
+</head>
+
+<body>
+  
+<!-- Form Mixin-->
+<!-- Input Mixin-->
+<!-- Button Mixin-->
+<!-- Pen Title-->
+<div class="pen-title">
+  <h1> Damn Vulnerable Flask Application </h1>
+  <h4>  </h4>
+</div>
+<!-- Form Module-->
+<div class="module form-module">
+  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+    <div class="tooltip">Click Me</div>
+  </div>
+  <div class="form">
+    <h2>Login to your account</h2>
+    <form>
+      <input type="text" placeholder="Username"/>
+      <input type="password" placeholder="Password"/>
+      <button>Login</button>
+    </form>
+  </div>
+  <div class="form">
+    <h2>Create an account</h2>
+    <form>
+      <input type="text" placeholder="Username"/>
+      <input type="password" placeholder="Password"/>
+      <input type="email" placeholder="Email Address"/>
+      <input type="tel" placeholder="Phone Number"/>
+      <button>Register</button>
+    </form>
+  </div>
+  <div class="cta"><a href="/">Forgot your password?</a></div>
+</div>
+  <script src="{{url_for('static',filename='login/css/jquery-2.1.3.min.js')}}"></script>
+
+
+    <script src="{{url_for('static',filename='login/js/index.js')}}"></script>
+
+</body>
+</html>

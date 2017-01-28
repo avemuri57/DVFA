@@ -1,10 +1,12 @@
-from app import db
+class User(UserMixin):
+    # proxy for a database of users
+    user_database = {"JohnDoe": ("JohnDoe", "John"),
+               "JaneDoe": ("JaneDoe", "Jane")}
 
+    def __init__(self, username, password):
+        self.id = username
+        self.password = password
 
-class User(db.Model):
-	id = db.Column(db.Integer, primary_key = True)
-	username = db.Column(db.String(64), index = True, unique = True)
-	email = db.Column(db.String(120), index = True, unique = True)
-
-	def __repr__(self):
-		return '<User %r>' % (self.username)
+    @classmethod
+    def get(cls,id):
+        return cls.user_database.get(id)

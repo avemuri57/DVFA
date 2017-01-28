@@ -4,7 +4,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config():
 	SECRET_KEY = 'ThisIsASecret'
-	Debug=True
 	DB_USERNAME='dbuser'
 	DB_PASSWORD=''
 	DATABASE_NAME='dvfa'
@@ -13,5 +12,3 @@ class Config():
 	SQLALCHEMY_DATABASE_URI = DB_URI	
 	WTF_CSRF_ENABLED = True
 	SECRET_KEY = 'you-will-never-guess'
-	SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
-	SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')

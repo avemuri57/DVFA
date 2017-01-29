@@ -1,16 +1,19 @@
 from dvfa import app
-from flask import render_template,url_for,redirect
-from flask_wtf import Form
+from flask import render_template,url_for,redirect,request
+from wtforms import Form, BooleanField, TextField, validators
 
 
 @app.route('/')
 def index():
 	return render_template('login.html')
 
-@app.route('/login',methods=['POST'])
+@app.route('/login',methods=['GET','POST'])
 def login():
-	next = flask.request.args.get('next')
-	return flask.redirect(next or flask.url_for('index'))
+	#form LoginForm(request.POST)
+	if request.method == 'POST':
+		return render_template('index.html')
+
+	return render_template('login.html')
 
 @app.route('/about')
 def about():

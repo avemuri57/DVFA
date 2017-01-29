@@ -1,7 +1,7 @@
 from dvfa import app
 from flask import render_template,url_for,redirect,request
 from wtforms import Form, BooleanField, TextField, validators
-
+from home import forms
 
 @app.route('/')
 def index():
@@ -9,7 +9,7 @@ def index():
 
 @app.route('/login',methods=['GET','POST'])
 def login():
-	#form LoginForm(request.POST)
+	print(form.username)
 	if request.method == 'POST':
 		return render_template('index.html')
 

@@ -11,3 +11,4 @@ PyMySQL
 SQLAlchemy
 Werkzeug
 WTForms
+flask_login

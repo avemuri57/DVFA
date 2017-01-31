@@ -4,6 +4,8 @@ from config import Config
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config.from_object(Config)
-from home import views
-db = SQLAlchemy(app)
+app.config.from_object(Config())
+
+from .views import *
+from .common import *
+db.init_app(app)

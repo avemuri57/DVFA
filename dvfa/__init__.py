@@ -11,4 +11,12 @@ app.config.from_object(Config())
 
 from .views import *
 from .common import *
+
 db.init_app(app)
+login_manager.init_app(app)
+
+login_manager.login_view = "login"
+
+@login_manager.user_loader
+def load_user(id):
+	return Patient.query.filter_by(id=id).first()

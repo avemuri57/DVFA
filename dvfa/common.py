@@ -1,6 +1,10 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+
+
 
 db = SQLAlchemy()
+login_manager = LoginManager()
 #from migrate.versioning import api
 #from config import Config
 #from .dvfa import db

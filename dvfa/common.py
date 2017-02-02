@@ -1,17 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-
+from flask_rbac import RBAC
 
 
 db = SQLAlchemy()
 login_manager = LoginManager()
-#from migrate.versioning import api
-#from config import Config
-#from .dvfa import db
-#import os.path
-#db.create_all()
-#if not os.path.exists(Config.SQLALCHEMY_MIGRATE_REPO):
-#    api.create(Config.SQLALCHEMY_MIGRATE_REPO, 'database repository')
-#    api.version_control(Config.SQLALCHEMY_DATABASE_URI, Config.SQLALCHEMY_MIGRATE_REPO)
-#else:
-#    api.version_control(Config.SQLALCHEMY_DATABASE_URI, Config.SQLALCHEMY_MIGRATE_REPO, api.version(Config.SQLALCHEMY_MIGRATE_REPO))
+rbac = RBAC()

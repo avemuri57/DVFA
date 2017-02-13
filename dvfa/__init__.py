@@ -14,7 +14,7 @@ from .views import *
 from .common import *
 
 db.init_app(app)
-rbac.init_app(app)
+#rbac.init_app(app)
 login_manager.init_app(app)
 
 

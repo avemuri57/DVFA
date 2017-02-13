@@ -13,6 +13,8 @@ def index():
 @app.route('/login',methods=['GET','POST'])
 def login():
 	if request.method == 'POST':
+		form1 = LoginForm(request.form)
+		print(form1.username)
 		form = request.form
 		p = authenticate(form['username'],form['password'])
 

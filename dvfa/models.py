@@ -14,15 +14,6 @@ class Patient(db.Model, UserMixin):
 	ccn = db.Column(db.String(16),unique=True)
 	ssn = db.Column(db.String(10),unique=True)
 
-	def __init__(self,**kwargs):
+	def __init__(self):
 		pass
-		#self.firstname=firstname
-		#self.lastname=lastname
-		#self.username=username
-		#self.password=password #Stored in plain-text
-		#self.email=email
-		#self.ccn=ccn
-		#self.ssn=ssn
-
-	def is_active(self):
-		return True
+	
